@@ -1,0 +1,258 @@
+@import url(../CSS/estilo.css);
+
+
+//COLORES WEB
+$color_principal:#032A44;
+$color_secundario:#3C64B1;
+$color_hover:#0B3F77;
+$backgrounds_fondoCeleste:#3c65b12d;
+$color_complementario:#FF9012;
+$negro:#000;
+$negro90:#333;
+$blanco:#fff;
+ 
+
+//CONDICIONALES
+/*************** 
+
+ESTILOS DE TEXTO
+
+***************/
+@for $i from 1 through 3 {
+    h#{$i} { 
+        font: 2.5em / $i;
+        @if $i==1 {
+            color: $negro90;
+        } @else if $i==2{
+            color: $negro90;
+            margin-bottom: 30px;
+            line-height: 1.2em;
+        }@else {
+            color: $color_secundario;
+            margin-bottom: 2rem;
+            font-weight: 800;
+        } 
+    }
+} 
+
+
+
+
+/*************** 
+
+BREADCRUMBS DE BOOTSTRAP
+
+***************/
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+  }
+
+  
+
+
+/*************** 
+
+GRIDS
+
+***************/
+#grilla {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "seccion1 seccion1"
+      "seccion2 seccion2"
+      "seccion3 seccion3"
+      "footer footer";
+ }
+ .border {
+    border: 1px solid $negro;
+ }
+
+ header {
+    grid-area: header;
+    align-items: center;
+    padding: 20px;
+ }
+ footer {
+    grid-area: footer;
+ }
+@for $i from 1 through 3 {
+    section#seccion#{$i} { 
+        grid-area: seccion+$i;
+    }
+}
+ nav {
+    grid-area: nav;
+ }
+
+ /*************** 
+
+SECCIONES
+
+***************/
+section{
+    background-color:$blanco;
+    padding: 7rem 3rem;
+}
+
+.cta{
+    padding: 4rem 3rem;
+}
+.sectionFlex {
+    display: flex;
+    align-items: center;
+    div{
+        padding: 0 30px;
+    }
+}
+
+
+
+/*************** 
+
+BACKGROUNDS
+
+***************/
+@each $bg in fondoAzul, fondoCeleste {
+    .#{$bg} {
+      @if $bg == "fondoAzul" {
+        background-color:$color_secundario;
+      } @else{
+        background-color:$backgrounds_fondoCeleste;
+      }
+    }
+ }
+
+
+//BEM
+
+/*************** 
+
+ESTILOS HEADER
+
+***************/
+.header__titulos{    
+    margin: 120px 0 80px;
+    order: 2;
+    width: 100%;
+}
+.header__titulosInterior{    
+    background-image: url("../img/insulina.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 50px 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.header{
+    padding: 20px 50px 10px;display: flex;
+}
+
+
+/*************** 
+
+LOGO
+
+***************/
+.logo{
+    text-align: left;
+}
+.logo img{
+    width: 18%;
+}
+img{
+    width: 100%;
+}
+
+
+
+
+/*************** 
+
+ESTILOS FOOTER
+
+***************/
+footer{
+    padding: 30px 50px 10px;
+    font-size: 0.8rem;display: flex;
+}
+
+
+
+/*************** 
+
+MENÚ
+
+***************/
+.menu,.copyright {
+    display: inline-block;
+    flex-grow: 5;
+    justify-content: flex-end;
+    display: flex;
+}
+.menu__nav{
+    padding-left: 0;
+    list-style: none;
+    display: inline-block;
+    position:relative;
+}
+.menu__nav li{
+    display: inline-block;padding: 0 10px;
+    margin: 0;
+}
+.menu__nav li:hover{
+    color:$color_principal;
+}
+ul.menu__nav ul {
+    position: absolute;
+    display: none;
+ }
+ul.menu__nav ul li {
+    display: block;
+    margin: 0;
+    background: #1f6492;
+    padding: 10px 40px 10px 20px;
+    color: #fff;
+    text-align: left;
+}
+ul.menu__nav ul li:hover{
+    background-color:#FF9012;
+    color: #fff;
+}
+ul.menu__nav li:hover ul {
+    display:block;
+ }
+ ol, ul {
+    padding-left: 0;
+}
+
+
+
+/*************** 
+
+BOTONES
+
+***************/
+.btn.btn-white {
+    background: transparent;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 50px;
+    padding: 12px 42px;
+    cursor: pointer;
+    font-size: 1rem;    font-family: 'Mulish', sans-serif;
+
+}
+.btn.btn-white:hover {
+    color: #7789be;
+    background: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 50px;
+}
