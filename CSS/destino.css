@@ -34,44 +34,12 @@ BREADCRUMBS DE BOOTSTRAP
 
 /*************** 
 
-GRIDS
-
-***************/
-#grilla {
-  display: grid;
-  grid-template-areas: "header header" "seccion1 seccion1" "seccion2 seccion2" "seccion3 seccion3" "footer footer"; }
-
-.border {
-  border: 1px solid #000; }
-
-header {
-  grid-area: header;
-  align-items: center;
-  padding: 20px; }
-
-footer {
-  grid-area: footer; }
-
-section#seccion1 {
-  grid-area: seccion1; }
-
-section#seccion2 {
-  grid-area: seccion2; }
-
-section#seccion3 {
-  grid-area: seccion3; }
-
-nav {
-  grid-area: nav; }
-
-/*************** 
-
 SECCIONES
 
 ***************/
 section {
   background-color: #fff;
-  padding: 7rem 3rem; }
+  padding: 3rem 1rem; }
 
 .cta {
   padding: 4rem 3rem; }
@@ -98,20 +66,21 @@ BACKGROUNDS
 ESTILOS HEADER
 
 ***************/
-.header__titulos {
-  margin: 120px 0 80px;
-  order: 2;
-  width: 100%; }
-
 .header__titulosInterior {
   background-image: url("../img/insulina.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 30px 50px 40px;
-  text-align: center;
-  flex-wrap: wrap; }
+  padding: 130px 50px 60px;
+  text-align: center; }
 
-.header {
+header {
+  grid-area: header;
+  align-items: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 999;
   padding: 20px 50px 10px;
   display: flex; }
 
@@ -138,6 +107,46 @@ footer {
   padding: 30px 50px 10px;
   font-size: 0.8rem;
   display: flex; }
+
+/*************** 
+
+BOTONES
+
+***************/
+.btn.btn-white {
+  background: transparent;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 50px;
+  padding: 12px 42px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Mulish', sans-serif; }
+
+.btn.btn-white:hover {
+  color: #7789be;
+  background: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 50px; }
+
+.btn.btn-azul {
+  background: transparent;
+  color: #1f6492;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #1f6492;
+  border-radius: 50px;
+  padding: 12px 42px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Mulish', sans-serif; }
+  .btn.btn-azul:hover {
+    background: #1f6492;
+    color: #fff; }
 
 /*************** 
 
@@ -186,27 +195,95 @@ ul.menu__nav li:hover ul {
 ol, ul {
   padding-left: 0; }
 
-/*************** 
+.newburgerintown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40vh;
+  width: 50%;
+  min-width: 400px;
+  height: 60px;
+  margin: 0 auto; }
+  .newburgerintown h1 {
+    font-weight: 300;
+    color: #ECF0F1; }
+  .newburgerintown p {
+    font-weight: 100;
+    color: #ECF0F1;
+    letter-spacing: .1em; }
 
-BOTONES
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 1.7rem;
+  right: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none; }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none; }
+    #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #032A44; }
+      #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2); }
+      #menuToggle input:checked ~ span:nth-last-child(2) {
+        opacity: 1;
+        transform: rotate(-45deg) translate(0, -1px); }
+    #menuToggle input:checked ~ ul {
+      transform: scale(1, 1);
+      opacity: 1; }
+  #menuToggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #032A44;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 3px 0px;
+    transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%; }
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%; }
 
-***************/
-.btn.btn-white {
-  background: transparent;
-  color: #fff;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #fff;
-  border-radius: 50px;
-  padding: 12px 42px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family: 'Mulish', sans-serif; }
-
-.btn.btn-white:hover {
-  color: #7789be;
+#menu {
+  position: absolute;
+  width: 90vw;
+  height: 110vh;
+  margin: -100px 0 0 -240px;
+  padding: 50px;
+  padding-top: 50px;
+  padding-top: 125px;
   background: #fff;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #fff;
-  border-radius: 50px; }
+  list-style-type: none;
+  transform-origin: 0 0;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  text-align: center;
+  box-shadow: -7px 1px 35px -12px #032a44;
+  -webkit-box-shadow: -7px 1px 35px -12px #032a44;
+  -moz-box-shadow: -7px 1px 35px -12px #032a44; }
+  #menu li {
+    color: #000;
+    list-style-type: none;
+    font-weight: 300; }
+    #menu li a {
+      color: #032A44;
+      text-decoration: none; }
+      #menu li a:hover {
+        color: #0B3F77;
+        text-decoration: none; }

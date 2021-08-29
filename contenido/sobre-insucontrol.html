@@ -18,44 +18,73 @@
     <title>Contáctanos</title>
 </head>
 <body>
-    <header class="header header__titulosInterior">
-        <div class="logo"><img src="../img/insucontrol-logo.png" alt=""></div>
-        <div class="menu">
-            <ul class="menu__nav">
-                <a href="../index.html">
-                    <li>Inicio</li>
-                </a>
-                <a href="./sobre-insucontrol.html">
-                    <li>Nosotros
-                        <ul>
+    <header class="header">
+        <div class="logo col-md-4"><img src="../img/insucontrol-logo.png" alt=" logo insucontrol"></div>
+            <nav class="col-md-8 col-sm-12 alinearDerecha menuDesktop">
+                <ul class="menu__nav">
+                    <a href="../index.html">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="./sobre-insucontrol.html">
+                        <li>Nosotros
+                            <ul>
+                                <a href="./preguntas-frecuentes.html"><li>Preguntas Frecuentes</li></a>
+                                <a href=""><li>Ayuda</li></a>
+                            </ul>  
+                        </li>
+                    </a>
+                    <a href="./funcionalidad.html">
+                        <li>Funcionalidades</li>
+                    </a>
+                    <a href="./contacto.html">
+                        <li>Contacto</li>
+                    </a>
+                    <a href="">
+                    <li class="btn btn-azul">Descargar</li>
+                    </a>
+                </ul>
+            </nav>  
+    
+                <nav class="mobilescreen">
+                    <div title="Menu" id="menuToggle">
+                      <input type="checkbox">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                         <ul id="menu">
+                            <a href="../index.html">
+                                <li>Inicio</li>
+                            </a>
+                            <a href="./sobre-insucontrol.html">
+                                <li>Nosotros
+                                </li>
+                            </a>
                             <a href="./preguntas-frecuentes.html"><li>Preguntas Frecuentes</li></a>
-                            <a href=""><li>Ayuda</li></a>
-                        </ul>  
-                    </li>
-                </a>
-                <a href="./funcionalidad.html">
-                    <li>Funcionalidades</li>
-                </a>
-                <a href="./contacto.html">
-                    <li>Contacto</li>
-                </a>
-                <a href="">
-                    <li>Descargar</li>
-                </a>
-            </ul>
-        </div>
-        <div class="header__titulos centrar">
-            <h1>Conoce sobre Insucontrol</h1>
-            
-            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
-                </ol>
-            </nav>
-
-        </div>
+                                        <a href=""><li>Ayuda</li></a>
+                            <a href="./funcionalidad.html">
+                                <li>Funcionalidades</li>
+                            </a>
+                            <a href="./contacto.html">
+                                <li>Contacto</li>
+                            </a>
+                            <a href="">
+                                <li class="btn btn-azul">Descargar</li>
+                            </a>
+                          </ul>
+                      </div>
+                  </nav>
     </header>
+
+    
+    <div class="header__titulos  header__titulosInterior">
+        <h1>Conoce sobre Insucontrol</h1>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+            </ol>
+        </nav>
+    </div>
 
 
 

@@ -29,18 +29,7 @@ a{
 
 
 
-.btn.btn-azul {
-    background: transparent;
-    color: #1f6492;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #1f6492;
-    border-radius: 50px;
-    padding: 12px 42px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: 'Mulish', sans-serif;
-}
+
 
 
 
@@ -189,7 +178,14 @@ ESTILOS MOBILE
         padding: 3rem;
     }
     iframe, .video{width:100%}
+    header nav.menuDesktop, .menu{
+        display: none;
+    }
 
 
-
+}
+@media only screen and (min-width: 600px) {
+    .mobilescreen{
+        display: none;
+    }
 }
