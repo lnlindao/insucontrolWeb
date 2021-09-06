@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(../CSS/estilo.css);
+@import url(../css/estilo.css);
 /*************** 
 
 ESTILOS DE TEXTO
@@ -39,7 +39,7 @@ SECCIONES
 ***************/
 section {
   background-color: #fff;
-  padding: 3rem 1rem; }
+  padding: 8rem 3rem; }
 
 .cta {
   padding: 4rem 3rem; }
